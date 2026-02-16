@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+  --neon-cyan: #00f2ff;
+  --neon-purple: #bd00ff;
+  --bg-dark: #050816;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: transparent; /* Allows stars to show */
+  min-height: 100vh;
+  padding-top: 70px;
+  color: #ffffff; /* FORCE ALL TEXT TO WHITE */
+}
+
+/* --- FIXING THE INVISIBLE TEXT --- */
+
+/* 1. Force "Muted" text (Descriptions) to be Bright Silver */
+.text-muted {
+  color: #e0e0e0 !important; 
+}
+
+/* 2. Force Paragraphs to be White/Silver */
+p {
+  color: #e0e0e0;
+}
+
+/* 3. Force Links/Icons to be White */
+a, h1, h2, h3, h4, h5, h6 {
+  color: #ffffff !important;
+}
+
+/* --- GLASS CARDS --- */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border-radius: 16px;
+  color: #ffffff; /* Force card text to white */
+}
+
+.glass-card:hover {
+  border-color: var(--neon-cyan);
+  box-shadow: 0 0 20px rgba(0, 242, 255, 0.2); 
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+/* --- GRADIENT HEADINGS --- */
+.text-gradient {
+  background: linear-gradient(to right, var(--neon-cyan), var(--neon-purple));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+/* --- BUTTONS --- */
+.btn-primary {
+  background: transparent;
+  border: 1px solid var(--neon-cyan);
+  color: var(--neon-cyan);
+}
+
+.btn-primary:hover {
+  background: var(--neon-cyan);
+  color: black;
+  box-shadow: 0 0 15px var(--neon-cyan);
+}
+
+/* --- NAVBAR --- */
+.navbar {
+  background: rgba(0, 0, 0, 0.9) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-brand, .nav-link {
+  color: #ffffff !important;
+}
